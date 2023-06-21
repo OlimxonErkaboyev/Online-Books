@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <div class="container">
+        <nav class="navbar" class="row navbar fixed-top bg-dark text-white">
+          <a href="./index.html">
+            <img
+              class="logo-img"
+              src="https://i.pinimg.com/564x/73/b8/0b/73b80b049a44b94049d2ab2691c09083.jpg"
+              alt="Online Books"
+              width="250"
+              height="100"
+            />
+          </a>
+          <div class="">
+            <a class="link home me-3 text-decoration-none" href="#">Home</a>
+            <a class="link portfolio me-3 text-decoration-none" href="#"
+              >Portfolio</a
+            >
+            <a class="link my__github text-decoration-none" href="#"
+              >My GIthub</a
+            >
+            <button class="saved">Saved</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <section class="search-section">
+        <div class="container">
+          <h1 class="visually-hidden">salom</h1>
+          <form class="js-form">
+            <div class="d-flex align-items-center justify-content-between">
+              <input
+                class="js-search-input search-input"
+                type="search"
+                name="input"
+                placeholder="Search"
+                autocomplete="off"
+              />
+              <button class="find-btn">Find</button>
+            </div>
+            <div class="d-flex gap-3 mt-3">
+              <select class="js-sort-select sort-select" name="select">
+                <option class="" disabled selected hidden value="sort">
+                  Sort by
+                </option>
+                <option class="a-z" value="A-Z">A-Z</option>
+                <option class="z-a" value="Z-A">Z-A</option>
+                <option class="z-a" value="Low-pages">Low-pages</option>
+                <option class="z-a" value="High-pages">High-pages</option>
+              </select>
+              <input
+                class="js-year-input year-input"
+                type="search"
+                name="input"
+                placeholder="Year"
+                autocomplete="off"
+              />
+              <input
+                class="js-author-input author-input"
+                type="search"
+                name="input"
+                placeholder="Author"
+                autocomplete="off"
+              />
+              <select class="js-category category" name="select">
+                <option selected value="all">All</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="main-section">
+        <div class="container">
+          <ul
+            class="js-list col-12 d-flex align-items-center mt-5 mb-5 flex-wrap"
+          ></ul>
+        </div>
+      </section>
+    </main>
+
+    <template class="js-book-temp">
+      <li class="js-li col-3 p-2">
+        <div class="book-item rounded w-100 h-100 p-2">
+          <div class="d-flex align-items-center">
+            <img
+              class="js-book-img book-img mx-auto mb-3"
+              src="https://upload.wikimedia.org/wikipedia/en/6/65/ThingsFallApart.jpg"
+              alt="Things Fall Apart"
+              width="200"
+              height="290"
+            />
+          </div>
+          <h5 class="js-book-title title">Things Fall Apart</h5>
+          <h6 class="js-book-author author">Chinua Achebe</h6>
+          <div
+            class="d-flex align-items-center justify-content-between mb-3 mt-3"
+          >
+            <span class="js-book-year year d-flex align-items-center"
+              >1958</span
+            >
+            <span class="js-book-page page d-flex align-items-center"
+              >209
+            </span>
+            <span class="js-book-lang lang d-flex align-items-center"
+              >English</span
+            >
+          </div>
+          <div class="d-flex align-items-center justify-content-between">
+            <a
+              class="js-wiki"
+              href="https://en.wikipedia.org/wiki/Things_Fall_Apart"
+              >Wikipedia</a
+            >
+            <button class="js-save-btn btn btn-success me-3">Save</button>
+          </div>
+        </div>
+      </li>
+    </template>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/books.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>
